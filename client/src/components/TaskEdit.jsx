@@ -42,7 +42,7 @@ function TaskEdit({ task, onSave, onCancel }) {
       </select>
 
       {/* Action Buttons */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center justify-end space-x-2">
         <button
           onClick={handleSubmit}
           className="px-4 py-2 cursor-pointer bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg flex items-center gap-2 shadow-lg"

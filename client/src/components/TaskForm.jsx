@@ -35,16 +35,18 @@ function TaskForm({ onCancel, createTask, newModel, setNewModel }) {
           focus:outline-none focus:ring-1 focus:ring-blue-500"
           rows="3"
         />
-        <div className="flex gap-3">
+        <div className="grid grid-cols-2 gap-2 sm:gap-3">
           <button
             onClick={createTask}
-            className="flex-1 bg-gradient-to-r from-blue-600 to-blue-500 text-white py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:from-blue-500 transition"
+            className="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-2.5 sm:py-3 px-2 sm:px-4 rounded-lg flex items-center justify-center gap-1 sm:gap-2 text-sm sm:text-base hover:from-blue-500 transition"
           >
-            <Plus size={16} /> Add Task
+            <Plus size={14} className="sm:w-4 sm:h-4" />
+            Add Task
           </button>
+
           <button
             onClick={onCancel}
-            className="flex-1 bg-gray-700 tex-gray-300 py-3 rounded-lg hover:bg-gray-600 transition"
+            className="w-full bg-gray-700 text-gray-300 py-2.5 sm:py-3 px-2 sm:px-4 rounded-lg text-sm sm:text-base hover:bg-gray-600 transition"
           >
             Cancel
           </button>

@@ -3,14 +3,13 @@ function ToDoHeader({ username, onLogout }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex items-center justify-between p-4 rounded-xl">
+    <div className="sticky top-0 z-40  bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-between p-4 rounded-xl">
       <div className="flex-1 text-center">
         <h3 className="text-white text-2xl font-bold">To-Do List</h3>
         <p className="text-gray-300 text-sm">
           Stay organized and get things done!
         </p>
       </div>
-
     </div>
   );
 }

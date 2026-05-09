@@ -43,7 +43,7 @@ function TaskList({
         }
       `}</style>
 
-      <div className="task-scroll max-h-[550px] overflow-y-auto pr-2 space-y-4 border border-gray-700 rounded-lg p-4">
+      <div className="task-scroll max-h-[50vh] sm:max-h-[65vh] overflow-y-auto pr-1 sm:pr-2 space-y-4 border border-gray-700 rounded-lg p-3 sm:p-4">
         {tasks.map((task) => (
           <TaskItems
             key={task._id}

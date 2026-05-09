@@ -9,14 +9,14 @@ function App() {
       <Header />
 
       {/* Landing Page Section */}
-      <section className="max-w-5xl mx-auto mt-20 px-6 text-center">
+      <section className="max-w-5xl mx-auto mt-12 sm:mt-20 px-4 sm:px-6 text-center">
         {/* Heading */}
-        <h1 className="text-5xl md:text-6xl font-extrabold text-white drop-shadow-md">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white drop-shadow-md">
           Organize Your Day,
           <span className="text-indigo-500"> Effortlessly</span>
         </h1>
 
-        <p className="mt-4 text-gray-300 text-lg max-w-2xl mx-auto">
+        <p className="mt-4 text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
           A smart and secure To-Do Manager to keep your daily tasks organized.
           Track, manage, and complete your goals with ease — anywhere, anytime.
         </p>
@@ -33,7 +33,7 @@ function App() {
 
         {/* Thumbnail / App Preview Card */}
         {/* Thumbnail / App Preview Card */}
-        <div className="mt-16 flex justify-center">
+        <div className="mt-12 sm:mt-16 flex justify-center">
           <div className="bg-gray-800/40 backdrop-blur-md border border-gray-700 shadow-2xl rounded-2xl p-6 w-full max-w-3xl">
             <h3 className="text-xl font-semibold text-white mb-3">
               Clean & Modern To-Do Manager
@@ -41,7 +41,7 @@ function App() {
 
             <div className="bg-gray-900 rounded-xl p-5 border border-gray-700 space-y-4">
               {/* Task Item 1 */}
-              <div className="flex items-center justify-between bg-gray-800/70 border border-gray-700 rounded-lg p-4 hover:border-indigo-500 hover:shadow-lg transition">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gray-800/70 border border-gray-700 rounded-lg p-4">
                 <div className="flex items-start space-x-3">
                   <span className="w-5 h-5 border-2 border-indigo-400 rounded-full"></span>
                   <div>

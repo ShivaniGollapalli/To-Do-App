@@ -4,7 +4,7 @@ import { CheckSquare, PlusCircle } from "lucide-react";
 
 function Header() {
   return (
- <header className="w-full bg-gray-900/50 backdrop-blur-lg border-b border-gray-700 p-4 rounded-xl shadow-lg">
+    <header className="w-full bg-gray-900/50 backdrop-blur-lg border-b border-gray-700 p-4 rounded-xl shadow-lg">
       <div className="max-w-6-xl mx-auto px-5 py-2 flex items-center justify-between">
         <Link
           to="/"

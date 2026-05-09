@@ -1,12 +1,14 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
+const API = axios.create({
+  baseURL: import.meta.env.VITE_API_URL
+});
+
 // Get logged-in user info
 export const getUserInfo = async () => {
   try {
-    const response = await axios.get("/auth/getUser", {
-      withCredentials: true,
-    });
+    const response = await API.get("/auth/getUser");
     return response?.data;
   } catch (error) {
     console.error("Error fetching user info:", error);
@@ -17,9 +19,7 @@ export const getUserInfo = async () => {
 // Fetch all tasks for the logged-in user
 export const fetchTaskAPI = async () => {
   try {
-    const response = await axios.get("/task/getAllTasks", {
-      withCredentials: true,
-    });
+    const response = await API.get("/task/getAllTasks");
     return response?.data?.tasks || [];
   } catch (error) {
     console.error("Error fetching tasks:", error);
@@ -30,9 +30,7 @@ export const fetchTaskAPI = async () => {
 // Fetch a single task by ID
 export const fetchTaskByIdAPI = async (id) => {
   try {
-    const response = await axios.get(`/task/getAllTasks/${id}`, {
-      withCredentials: true,
-    });
+    const response = await API.get(`/task/getAllTasks/${id}`);
     return response?.data?.task || null;
   } catch (error) {
     console.error("Error fetching task by ID:", error);
@@ -49,9 +47,7 @@ export const createTaskAPI = async (task) => {
       status: "pending", // Backend requires "status"
     };
 
-    const response = await axios.post("/task/createTask", payload, {
-      withCredentials: true,
-    });
+    const response = await API.post("/task/createTask", payload);
     const { status, message } = response.data;
 
     // SHOW TOASTS
@@ -66,9 +62,7 @@ export const createTaskAPI = async (task) => {
 // Update an existing task
 export const updateTaskAPI = async (id, task) => {
   try {
-    const response = await axios.patch(`/task/updateTask/${id}`, task, {
-      withCredentials: true,
-    });
+    const response = await API.patch(`/task/updateTask/${id}`, task);
     return response?.data?.task;
   } catch (error) {
     console.error("Error updating task:", error);
@@ -79,9 +73,7 @@ export const updateTaskAPI = async (id, task) => {
 // Delete a task by ID
 export const deleteTaskAPI = async (id) => {
   try {
-    const response = await axios.delete(`/task/deleteTask/${id}`, {
-      withCredentials: true,
-    });
+    const response = await API.delete(`/task/deleteTask/${id}`);
     return response?.data;
   } catch (error) {
     console.error("Error deleting task:", error);

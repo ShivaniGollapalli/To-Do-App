@@ -83,6 +83,7 @@ function Todo() {
   };
   const showActions = filter !== "all";
   useEffect(() => {
+    fetch("http://to-do-app-wmoj.onrender.com/health").catch(() => {});
     fetchTasks();
   }, []);
   return (
